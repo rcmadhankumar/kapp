@@ -51,7 +51,7 @@ jobs:
             --signature "checksums.txt.sig" \
             --certificate-identity-regexp=https://github.com/carvel-dev \
             --certificate-oidc-issuer=https://token.actions.githubusercontent.com \
-            ${{ checksums_file }}
+            "checksums.txt"
 
       - uses: actions/github-script@v4
         id: get-checksums-from-draft-release
