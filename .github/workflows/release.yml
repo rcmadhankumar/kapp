@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     # Set permissions of github token. See https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#permissions
     permissions:
-      contents: read
+      contents: write
       packages: write
       id-token: write
     steps:
