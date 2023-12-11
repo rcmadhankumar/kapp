@@ -47,8 +47,8 @@ jobs:
       - name: Verify checksums signature
         run: |
           cosign verify-blob \
-            --cert ${{ checksums_file_certificate }} \
-            --signature ${{ checksums_file_signature }} \
+            --cert "checksums.txt.pem" \
+            --signature "checksums.txt.sig" \
             --certificate-identity-regexp=https://github.com/carvel-dev \
             --certificate-oidc-issuer=https://token.actions.githubusercontent.com \
             ${{ checksums_file }}
